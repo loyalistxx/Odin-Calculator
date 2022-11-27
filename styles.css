@@ -1,36 +1,103 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     text-align: center;
-    color: whitesmoke;
-    background-color: rgb(63, 47, 47)
+    color: #c7c7c7;
+    background-color: rgb(63, 47, 47);
+}
+body {
+    margin: 0;
+    padding: 0;
 }
 #header > h1, #header > p {
     margin: 0;
 }
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculatorWrapper {
+ background-color: rgb(71, 70, 70);
+ padding: 5px;
+ margin: 15px;
+ border: solid 1px rgb(255, 255, 255);
+ box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.5)
+}
 #calculatorResult {
-    margin: 20px auto 5px auto;
-    max-width: 50vh;
-    padding: 5px;
-    font-size: large;
+    height: 75px;
+    margin: 5px auto 5px auto;
+    min-width: 50vh;
+    padding: 10px;
     text-align: end;
     border: solid 1px rgb(172, 155, 155);
     border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: background-color 0.5s;
+}
+#prevOperand {
+    color: #c7c7c7;
+}
+#currentOperand {
+    font-size: 2rem;
+}
+#calculatorResult:hover, #calculatorResult:hover > div {
+    background-color: rgb(112, 94, 94);;
+    color: rgb(63, 47, 47);
 }
 #calculatorButtons {
-    max-width: 50vh;
+    background-color: rgb(71, 70, 70);
+    min-width: 50vh;
     margin: auto;
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(4, 1fr);
 }
-#clear {
+.calcButton {
+    background-color: rgb(63, 47, 47);
+    max-width: 100%;
+    cursor: pointer;
+    width: 100%;
+    height: 26px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+} 
+#allClear {
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 5px; 
     grid-column: 4 / 5;
     grid-row: 2 / 4;
 }
 #backspace {
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 5px; 
     grid-row: 4 / 5;
     grid-column: 4 / 5;
 }
 #equal {
+    background-color: rgb(52, 88, 154);
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 5px; 
     grid-column: span 2;    
+    transition: background-color 0.5s;
+}
+.operator {
+    background-color: rgb(132, 129, 129);
+    transition: background-color 0.5s;
+}
+.calcButton:hover {
+    background-color: rgb(95, 76, 76);
+}
+#equal:hover {
+    background-color: rgb(71, 115, 196);
+}
+.operator:hover {
+    background-color: rgb(181, 177, 177);
 }

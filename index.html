@@ -6,37 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖩</text></svg>">
+    <script src="javascript.js" async></script>
 </head>
 <body>
     <header id="header">
         <h1>Odin Project - Javascript Calculator</h1>
-        <p>A Simple Javascript Calculator Project Made by loyalist / Adham</p>
+        <p>A Simple Javascript <a href="https://github.com/loyalistxx/Odin-Calculator" target="_blank">Calculator</a> Project Made by <a href="https://github.com/loyalistxx" target="_blank">loyalist</a> / Adham</p>
     </header>
     <section>
         <div id="calculatorWrapper">
-            <div id="calculatorResult"></div>
+            <div id="calculatorResult">
+                <div data-prevOperand id="prevOperand"></div>
+                <div data-currentOperand id="currentOperand">0</div>
+            </div>
             <div id="calculatorButtons">
-                <button type="button" class="calcButton" id="plus">+</button>
-                <button type="button" class="calcButton" id="minus">-</button>
-                <button type="button" class="calcButton" id="multiply">X</button>
-                <button type="button" class="calcButton" id="divide">÷</button>
-                <button type="button" class="calcButton" id="one" >1</button>
-                <button type="button" class="calcButton" id="two">2</button>
-                <button type="button" class="calcButton" id="three">3</button>
-                <button type="button" class="calcButton" id="four">4</button>
-                <button type="button" class="calcButton" id="five">5</button>
-                <button type="button" class="calcButton" id="six">6</button>
-                <button type="button" class="calcButton" id="seven">7</button>
-                <button type="button" class="calcButton" id="eight">8</button>
-                <button type="button" class="calcButton" id="nine">9</button>
-                <button type="button" class="calcButton" id="zero">0</button>
-                <button type="button" class="calcButton" id="dot">.</button>
-                <button type="button" class="calcButton" id="equal">=</button>
-                <button type="button" class="calcButton" id="clear">Clear</button>
-                <button type="button" class="calcButton" id="backspace">Backspace</button>
+                <button type="button" class="calcButton operator" data-operation>+</button>
+                <button type="button" class="calcButton operator" data-operation>-</button>
+                <button type="button" class="calcButton operator" data-operation>×</button>
+                <button type="button" class="calcButton operator" data-operation>÷</button>
+                <button type="button" class="calcButton" data-number>1</button>
+                <button type="button" class="calcButton" data-number>2</button>
+                <button type="button" class="calcButton" data-number>3</button>
+                <button type="button" class="calcButton" data-number>4</button>
+                <button type="button" class="calcButton" data-number>5</button>
+                <button type="button" class="calcButton" data-number>6</button>
+                <button type="button" class="calcButton" data-number>7</button>
+                <button type="button" class="calcButton" data-number>8</button>
+                <button type="button" class="calcButton" data-number>9</button>
+                <button type="button" class="calcButton" data-number>0</button>
+                <button type="button" class="calcButton" data-number>.</button>
+                <button type="button" data-equal class="operator" id="equal">=</button>
+                <button type="button" data-all-clear class="operator" id="allClear">AC</button>
+                <button type="button" data-backspace class="operator" id="backspace">Backspace</button>
             </div>
         </div>
     </section>
+    <footer>
+        <p>This project was made for <a href="https://www.theodinproject.com/about" target="_blank">The Odin Project</p>
+    </footer>
 </body>
 </html>
